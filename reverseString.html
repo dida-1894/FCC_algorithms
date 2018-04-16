@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>翻转字符串</title>
+</head>
+<body>
+  <h1>翻转字符串</h1>
+  <p>
+    先把字符串转化成数组，再借助数组的reverse方法翻转数组顺序，最后把数组转化成字符串。
+  </p>
+  <ul>
+    <li>
+      reverseString("hello") 应该返回一个字符串
+    </li>
+    <li>
+      reverseString("hello") 应该返回 "olleh".
+    </li>
+    <li>
+      reverseString("Howdy") 应该返回 "ydwoH".
+    </li>
+    <li>
+      reverseString("Greetings from Earth") 应该返回 "htraE morf sgniteerG"
+    </li>
+  </ul>
+</body>
+<script type="text/javascript">
+  function reverseString(str){
+    var arr=str.split(" ");
+    var myArry = new Array();
+    for (var i = 0; i < arr.length; i++) {
+      myArry[i] = re(arr[i]);
+    }
+    function re(string){
+      var arr1=new Array();
+      for (var i = 0; i < string.length; i++) {
+        arr1[i]=string.charAt(i);
+      }
+      arr1.reverse();
+      str1=arr1.join("");
+      return str1;
+    }
+    myArry=myArry.reverse();
+    var myStr=myArry.join(" ");
+    // console.log(myStr);
+    return myStr;
+  }
+  reverseString('Greetings from Earth');
+  reverseString("hello");
+  reverseString("Howdy");
+  // return console.log(str.split('').reverse().join(''));
+  //看到网上有人一行搞定，我觉得自己很sb；
+</script>
+</html>

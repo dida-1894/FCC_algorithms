@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  如果给定的字符串是回文，返回true，反之，返回false。
+
+如果一个字符串忽略标点符号、大小写和空格，正着读和反着读一模一样，那么这个字符串就是palindrome(回文)。
+函数参数的值可以为"racecar"，"RaceCar"和"race CAR"。
+</body>
+<script type="text/javascript">
+// U+0020-U+002F,U+0034-U+0040,U+005B-U+0060,U+007B-U007E
+  function palindrome(str){
+    var str=str.toLowerCase().replace(/[\W-]/g,'x');
+    console.log(str);
+    var str1=str.split('').reverse().join('');
+    console.log(str1);
+    if (str == str1) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  palindrome('race,;    CARert');
+</script>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  找出最长单词
+
+在句子中找出最长的单词，并返回它的长度。
+
+函数的返回值应该是一个数字。
+</body>
+<script type="text/javascript">
+// Array.prototype.max=function(){
+//   var max=this[0];
+//   for (var i = 0; i < this.length; i++) {
+//     if(this[i] > max){
+//       max=this[i];
+//     }
+//   }
+//   return max;
+// }
+  function findLongestWord(str){
+    var arr=str.split(" ");
+    var lengthArr=new Array();
+    var longest=0;
+    for (var i = 0; i < arr.length; i++) {
+      lengthArr[i]=arr[i].length;
+      if (longest<lengthArr[i]) {
+        longest=lengthArr[i];
+      }
+      // console.log(lengthArr);
+    }
+    console.log(longest);
+
+  }
+  findLongestWord("What if we try a super-long word such as otorhinolaryngology");
+  findLongestWord("May the force be with you");
+</script>
+</html>
