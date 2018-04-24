@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  检查字符串结尾
+
+判断一个字符串(str)是否以指定的字符串(target)结尾。
+
+如果是，返回true;如果不是，返回false。
+</body>
+<script type="text/javascript">
+function confirmEnding(str, target){
+ var arr=str.split("");
+ var arr2=target.split("");
+ console.log(arr2);
+ var j=0;
+ var result=true;
+ var num = target.length;
+ for (var i = arr.length-num; i < arr.length; i++) {
+   if (arr[i] == arr2[j] && j<num) {
+     j++;
+   } else {
+     result=false;
+   }
+ }
+ return result;
+}
+confirmEnding("Bastian", "n");
+</script>
+</html>

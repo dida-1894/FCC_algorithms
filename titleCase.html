@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  句中单词首字母大写
+
+  确保字符串的每个单词首字母都大写，其余部分小写。
+
+  像'the'和'of'这样的连接符同理。
+</body>
+<script type="text/javascript">
+  function titleCase(str){
+    var arr1=str.split(" ");
+    for (var i = 0; i < arr1.length; i++) {
+      arr1[i]=words(arr1[i]);
+    }
+    function words(word){
+      var arr2=word.split('');
+      for (var i = 0; i < arr2.length; i++) {
+        if (i == 0) {
+          arr2[0]=arr2[0].toUpperCase();
+        } else {
+          arr2[i]=arr2[i].toLowerCase();
+        }
+      }
+      return arr2.join('');
+    }
+    return arr1.join(' ');
+  }
+  console.log(titleCase("I'm a little tea pot"));
+</script>
+</html>

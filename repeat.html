@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  重复一个指定的字符串 num次，如果num是一个负数则返回一个空字符串。
+</body>
+<script type="text/javascript">
+  function repeat(str,num){
+    if (str > 0) {
+      return "";
+    } else {
+      var arr=str.split("");
+      for (var i = 0; i < num-1; i++) {
+        arr.push(str);
+      }
+      str=arr.join("");
+    }
+    console.log(str);
+  }
+  repeat("*", 3);
+  repeat("abc", 3);
+</script>
+</html>
