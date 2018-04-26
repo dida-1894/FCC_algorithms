@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  截断数组
+
+返回一个数组被截断n个元素后还剩余的元素，截断从索引0开始
+</body>
+<script type="text/javascript">
+  function slasher(arr, howMany){
+    if (howMany == arr.length || howMany == 0) {
+      console.log(arr);
+      return arr;
+    } else if(howMany>arr.length){
+      var arr=new Array();
+      console.log(arr);
+      return arr;
+    } else {
+      console.log(arr.slice(howMany,arr.length));
+      return arr.slice(howMany,arr.length);
+    }
+  }
+</script>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+猴子吃香蕉, 分割数组
+
+（猴子吃香蕉可是掰成好几段来吃哦）
+
+把一个数组arr按照指定的数组大小size分割成若干个数组块。
+
+例如:chunk([1,2,3,4],2)=[[1,2],[3,4]];
+
+chunk([1,2,3,4,5],2)=[[1,2],[3,4],[5]];
+</body>
+<script type="text/javascript">
+  function chunk(arr, size){
+    var num = arr.length;
+    var grounp = Math.floor(num / size);
+    var myArr = new Array();
+    var last=0;
+    for (var i = 0; i < grounp; i++) {
+      var arr1=arr.slice(i*size,(i+1)*size);
+      myArr.push(arr1);
+      // console.log(arr1);
+    }
+    if (num%size == 0) {
+      return myArr;
+    } else {
+      myArr.push(arr.slice(size*grounp,num));
+      return myArr;
+    }
+  }
+  // chunk(["a", "b", "c", "d", "e"], 2);
+  chunk([0, 1, 2, 3, 4, 5], 3);
+</script>
+</html>

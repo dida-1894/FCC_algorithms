@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  比较字符串
+
+（蛤蟆可以吃队友，也可以吃对手）
+
+如果数组第一个字符串元素包含了第二个字符串元素的所有字符，函数返回true。
+
+举例，["hello", "Hello"]应该返回true，因为在忽略大小写的情况下，第二个字符串的所有字符都可以在第一个字符串找到。
+
+["hello", "hey"]应该返回false，因为字符串"hello"并不包含字符"y"。
+
+["Alien", "line"]应该返回true，因为"line"中所有字符都可以在"Alien"找到
+</body>
+<script type="text/javascript">
+function mutation(arr){
+  var arr1=arr[0].toLowerCase().split("");
+  var arr2=arr[1].toLowerCase().split("");
+  var z=0;
+  for (var i = 0; i < arr1.length; i++) {
+    for (var j = 0; j < arr2.length; j++) {
+      if (arr2[j] == arr1[i]) {
+        z++;
+      }
+    }
+  }
+  if (z > arr2.length || z == arr2.length) {
+    return true;
+  } else {
+    return false;
+  }
+}
+mutation(["hello", "hey"]);
+mutation(["hello", "Hello"]);
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);
+mutation(["Mary", "Aarmy"]);
+</script>
+</html>
