@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+  function Stack(){
+    this.count = 0;
+    this.storage = {};
+    this.push = function(value){
+      this.storage[this.count] = value;
+      this.count++;
+    }
+    this.pop = function(){
+      if (this.count === 0) {
+        return console.log('undrfinde');
+      } else {
+      this.count--;
+
+      }
+    }
+  }
+
+</script>
+</html>
